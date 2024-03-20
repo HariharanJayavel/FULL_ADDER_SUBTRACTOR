@@ -38,18 +38,71 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+HALFADDER
+
+![image](https://github.com/HariharanJayavel/FULL_ADDER_SUBTRACTOR/assets/144870546/56edb5b4-d1d0-4846-afb2-aabf1d4b3bef)
+
+FULLSUBTRACTOR
+
+![image](https://github.com/HariharanJayavel/FULL_ADDER_SUBTRACTOR/assets/144870546/111c5914-73ac-45a7-b2b1-ba9766996100)
+
 **Procedure**
 
-Write the detailed procedure here
+Full Adder:
+
+1. Open Quartus II and create a new project.
+2. Use schematic design entry to draw the full adder circuit.
+3. The circuit consists of XOR, AND, and OR gates.
+4. Compile the design, verify its functionality through simulation.
+5. Implement the design on the target device and program it.
+
+Full Subtractor: 
+
+1. Follow the same steps as for the full adder. 
+2. Draw the full subtractor circuit using schematic design.
+3. The circuit includes XOR, AND, OR gates to perform subtraction.
+4. Compile, simulate, implement, and program the design similarly to the full adder.
 
 **Program:**
+```C
+Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
+Developed by:HARIHARAN J
+RegisterNumber:212223240047
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+module full_add_top(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+wire w1,w2,w3,w4;       
+xor(w1,a,b);
+xor(sum,w1,cin);        
 
+and(w2,a,b);
+and(w3,b,cin);
+and(w4,cin,a);
+
+or(carry,w2,w3,w4);
+endmodule
+
+module fullsub_top(a,b,Bin,BO,DIFF);
+input a,b,Bin;
+output BO,DIFF;
+assign DIFF = a ^ b ^ Bin;
+assign BO = (a & b) | ((a ^ b) & Bin);
+endmodule
+```
 **RTL Schematic**
+##### FULLADDER
+![Screenshot (83)](https://github.com/HariharanJayavel/FULL_ADDER_SUBTRACTOR/assets/144870546/dad47917-03d2-4337-b079-9b19dc696c5e)
+##### FULLSUBTRACTOR
+![Screenshot 2024-03-19 102734](https://github.com/HariharanJayavel/FULL_ADDER_SUBTRACTOR/assets/144870546/a06dada7-419e-4d9d-9ccf-8dcac66b9142)
 
 **Output Timing Waveform**
+
+##### FULLADDER
+![image](https://github.com/HariharanJayavel/FULL_ADDER_SUBTRACTOR/assets/144870546/211981d5-8fa7-417f-8215-030bb53d94ba)
+
+##### FULLSUBTRACTOR
+![image](https://github.com/HariharanJayavel/FULL_ADDER_SUBTRACTOR/assets/144870546/503a1330-6e9f-4c77-9898-19f29471b8e9)
 
 **Result:**
 
