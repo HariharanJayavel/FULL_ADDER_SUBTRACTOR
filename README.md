@@ -69,7 +69,7 @@ Program to design a half subtractor and full subtractor circuit and verify its t
 Developed by:HARIHARAN J
 RegisterNumber:212223240047
 
-module full_add_top(a,b,cin,sum,carry);
+module fulladd_top(a,b,cin,sum,carry);
 input a,b,cin;
 output sum,carry;
 wire w1,w2,w3,w4;       
@@ -99,10 +99,10 @@ endmodule
 **Output Timing Waveform**
 
 ##### FULLADDER
-![image](https://github.com/HariharanJayavel/FULL_ADDER_SUBTRACTOR/assets/144870546/211981d5-8fa7-417f-8215-030bb53d94ba)
+![image](https://github.com/HariharanJayavel/FULL_ADDER_SUBTRACTOR/assets/144870546/31659168-6d0e-437f-8b10-4eadb76fd57c)
 
 ##### FULLSUBTRACTOR
-![image](https://github.com/HariharanJayavel/FULL_ADDER_SUBTRACTOR/assets/144870546/503a1330-6e9f-4c77-9898-19f29471b8e9)
+![image](https://github.com/HariharanJayavel/FULL_ADDER_SUBTRACTOR/assets/144870546/8c859b6b-879f-4bcb-9a50-c1126403dc07)
 
 **Result:**
 
